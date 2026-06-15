@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+<title>تمريناتي 💪</title>
+<meta name="theme-color" content="#DEDEDE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="تمريناتي">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="exercises/icon-training.png">
+<link rel="icon" type="image/png" href="exercises/icon-training.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif}
+body{background:#DEDEDE;color:#0f172a;min-height:100vh;direction:rtl}
+#ap{max-width:480px;margin:0 auto;min-height:100vh;background:#DEDEDE}
+.btn{width:100%;padding:14px;border-radius:14px;border:none;cursor:pointer;font-weight:700;font-size:15px;margin-bottom:8px;transition:opacity .15s;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif}
+.btn:active{opacity:.8}
+.bo{background:#f97316;color:#fff}.bb{background:#3b82f6;color:#fff}.bg{background:#22c55e;color:#fff}
+.bs{background:#cbd5e1;color:#334155;font-size:13px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:14px;margin-bottom:10px}
+.tag{display:inline-flex;flex-direction:column;align-items:center;gap:8px;padding:14px 12px 10px;border-radius:14px;font-size:12px;margin:4px;background:#fff;border:1px solid #e2e8f0;color:#ea580c;min-width:100px;font-weight:600}
+.row{display:flex;align-items:center;gap:8px}
+.muted{color:#64748b;font-size:12px}
+.tip{background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2);border-radius:10px;padding:10px;margin-top:8px;font-size:13px;color:#c2410c}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.fi{animation:fi .3s ease-out}
+@keyframes celebrate-fade{0%{opacity:0}10%{opacity:1}85%{opacity:1}100%{opacity:0}}
+@keyframes celebrate-slide{from{transform:translateX(-110vw)}to{transform:translateX(110vw)}}
+.celebrate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:9999;overflow:hidden;background:rgba(255,255,255,.5);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);animation:celebrate-fade 1.6s ease-in-out forwards}
+.celebrate-text{font-size:26vw;font-weight:900;color:#f97316;white-space:nowrap;animation:celebrate-slide 1.6s ease-in-out forwards;letter-spacing:-1.5px;line-height:1}
+body.dark .celebrate{background:rgba(15,23,42,.5)}
+body.dark .celebrate-text{color:#fb923c}
+body.dark{background:#0f172a;color:#f1f5f9}
+body.dark #ap{background:#0f172a}
+body.dark .card{background:#1e293b;border-color:#334155}
+body.dark .muted{color:#94a3b8}
+body.dark .tag{background:#1e293b;border-color:#334155}
+body.dark .tip{background:rgba(251,146,60,.12);border-color:rgba(251,146,60,.25);color:#fdba74}
+body.dark .bs{background:#334155;color:#cbd5e1}
+body.dark .eq{background:rgba(74,222,128,.15);color:#4ade80}
+body.dark [style*="background:#fff"]{background:#1e293b !important}
+body.dark [style*="background:#f1f5f9"]{background:#334155 !important}
+body.dark [style*="background:#e2e8f0"]{background:#475569 !important}
+body.dark [style*="color:#0f172a"]{color:#f1f5f9 !important}
+body.dark [style*="color:#000"]{color:#f1f5f9 !important}
+body.dark [style*="color:#64748b"]{color:#94a3b8 !important}
+body.dark [style*="color:#898989"]{color:#94a3b8 !important}
+body.dark [style*="color:#475569"]{color:#cbd5e1 !important}
+body.dark [style*="color:#334155"]{color:#cbd5e1 !important}
+body.dark [style*="color:#767676"]{color:#cbd5e1 !important}
+body.dark [style*="color:#818181"]{color:#cbd5e1 !important}
+body.dark [style*="border:1px solid #e2e8f0"]{border-color:#334155 !important}
+body.dark [style*="border:1.5px solid #475569"]{border-color:#64748b !important}
+body.dark [style*="border:1.5px solid #cbd5e1"]{border-color:#475569 !important}
+body.dark [style*="border:2px solid #fff"]{border-color:#334155 !important}
+body.dark [style*="border:3px solid #fff"]{border-color:#334155 !important}
+body.dark [style*="background:rgba(255,255,255,.7)"]{background:rgba(30,41,59,.7) !important}
+body.dark [style*="background:rgba(255,255,255,.5)"]{background:rgba(30,41,59,.5) !important}
+body.dark [style*="border:1px solid #fff"]{border-color:#334155 !important}
+body.dark [style*="border:1.5px solid rgba(255,136,0,.5)"]{border-color:rgba(255,136,0,.7) !important}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.set-pulse{position:relative;overflow:hidden;isolation:isolate}
+.set-pulse::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.35) 50%,transparent 75%);background-size:220% 100%;animation:shimmer 1.8s linear infinite;pointer-events:none;z-index:1}
+.set-pulse > *{position:relative;z-index:2}
+.prog{height:4px;background:#e2e8f0}.prog-i{height:4px;transition:width .5s}
+.eq{display:inline-block;background:rgba(34,197,94,.1);color:#15803d;font-size:10px;padding:2px 7px;border-radius:6px;margin:2px}
+</style>
+</head>
+<body>
+<div id="ap"></div>
+<script>
+const DATA=[
+{id:1,name:'اليوم الأول',label:'السبت',tl:'الصدر والكتف والترايسبس',em:'💪',c:'o',
+ wu:[
+  {n:'دوران الذراعين',d:45,gif:'exercises/arm-circles.gif',ins:'دوّر ذراعيك للأمام 22 ثانية ثم للخلف 23 ثانية'},
+  {n:'فرد الكتفين',d:40,gif:'exercises/shoulder-stretch.gif',ins:'اسحب ذراعك على صدرك — 20 ثانية لكل جانب'},
+  {n:'قفز خفيف',d:45,gif:'exercises/light-jumping.gif',ins:'اقفز بخفة في مكانك 45 ثانية لتسخين الجسم'},
+  {n:'5 دقايق سيكل خفيف',d:300,gif:'exercises/Light-Cycling.jpg',ins:'اركب السيكل بسرعة خفيفة لتسخين الجسم كله'}
+ ],
+ ex:[
+  {id:'e1',n:'ضغط الدمبل على البنش المائل (Decline)',en:'Decline Dumbbell Press',eq:'دمبل + Decline Bench',gif:'exercises/decline-press.gif',s:3,r:10,rest:30,w:'8 كيلو لكل يد',ms:['الصدر السفلي','الكتف الأمامي','الترايسبس'],steps:['استلقِ على البنش المائل (الرأس لأسفل)','امسك الدمبل بكل يد على مستوى الصدر','ادفع الدمبل للأعلى ببطء','انزل ببطء حتى تحس بشد في الصدر','ركّز على الإحساس في وسط وأسفل الصدر'],tip:'البنش المائل بيركز على الجزء السفلي من الصدر'},
+  {id:'e2',n:'ضغط الصدر على الجهاز',en:'Chest Press Machine',eq:'Chest Press Machine',gif:'exercises/chest-press.gif',s:3,r:12,rest:30,w:'وزن متوسط مريح',ms:['الصدر','الكتف الأمامي','الترايسبس'],steps:['اضبط الكرسي على مستوى الصدر','امسك المقابض','ادفع للأمام حتى تمد ذراعيك','ارجع ببطء'],tip:'الجهاز بيثبت الحركة — مثالي بعد الدمبل'},
+  {id:'e3',n:'تفتيح الصدر بالدمبل على البنش المائل',en:'Decline Dumbbell Fly',eq:'دمبل + Decline Bench',gif:'exercises/decline-dumbbell-fly.gif',s:3,r:12,rest:30,w:'5-6 كيلو لكل يد',ms:['الصدر — التشكيل','الصدر السفلي'],steps:['استلقِ على البنش المائل (الرأس لأسفل)','امسك الدمبل بكل يد فوق صدرك، الذراعين مستقيمة','المرفقين منحنية قليلاً وثابتة','افتح ذراعيك للجانبين ببطء حتى تحس بشد في الصدر','ارجع للأعلى في حركة عناق — ركّز على ضم الصدر'],tip:'تمرين ممتاز لشكل الصدر — الوزن أقل بكتير من الضغط'},
+  {id:'e4',n:'ضغط الكتف بالدمبل',en:'Dumbbell Shoulder Press',eq:'دمبل',gif:'exercises/Dumbbell-Shoulder-Press.gif',s:3,r:10,rest:30,w:'5-6 كيلو لكل يد',ms:['الكتف','الترايسبس'],steps:['اجلس على البنش أو وقوف مستقيم','الدمبل في مستوى الكتف، المرفقين 90 درجة','ادفع للأعلى فوق رأسك','انزل ببطء','ظهرك مستقيم'],tip:'لو حسيت بضغط على رقبتك قلل الوزن'},
+  {id:'e5',n:'مد الترايسبس بالكابل',en:'Cable Tricep Pushdown',eq:'Cable Machine',gif:'exercises/tricep-pushdown.gif',s:3,r:12,rest:45,w:'وزن متوسط',ms:['الترايسبس'],steps:['اضبط الكابل في الوضع العلوي بمقبض مستقيم','المرفقين جنب جسمك','ادفع المقبض للأسفل حتى تمد ذراعيك','ركّز على ضغط الترايسبس','ارجع ببطء'],tip:'المرفقين ثابتين جنب جسمك'}
+ ],
+ cd:[
+  {n:'إطالة الصدر',d:30,gif:'exercises/chest-stretch.gif',ins:'افتح ذراعيك للخلف واحبس 30 ثانية'},
+  {n:'إطالة الكتف',d:40,gif:'exercises/shoulder-stretch.gif',ins:'اسحب ذراعك على صدرك — 20 ثانية لكل جانب'},
+  {n:'إطالة الترايسبس',d:40,gif:'exercises/tricep-stretch.gif',ins:'ارفع ذراعك وأنزل اليد خلف رأسك — 20 ثانية لكل ذراع'},
+  {n:'تنفس عميق',d:60,gif:'exercises/deep-breathing.jpg',ins:'5 أنفاس عميقة بالأنف لتهدئة الجسم'}
+ ]},
+{id:2,name:'اليوم الثاني',label:'الاثنين',tl:'الأرجل والكور',em:'🦵',c:'b',
+ wu:[
+  {n:'5 دقايق على التريدميل',d:300,gif:'exercises/treadmill-walk.gif',ins:'امشِ بسرعة متوسطة على التريدميل لتسخين الأرجل'},
+  {n:'دوران الورك',d:45,gif:'exercises/hip-rotations.gif',ins:'يديك على الخصر، دوّر وركيك 10 مرات لكل اتجاه'},
+  {n:'سكوات تسخين',d:45,gif:'exercises/warmup-squats.gif',ins:'10 سكوات خفيفة ببطء بدون وزن'}
+ ],
+ ex:[
+  {id:'e6',n:'جوبلت سكوات بالدمبل',en:'Goblet Squat',eq:'دمبل واحد 10 كيلو',gif:'exercises/goblet-squat.gif',s:3,r:12,rest:30,w:'10 كيلو',ms:['الفخذ الأمامي','المؤخرة','الكور'],steps:['امسك دمبل واحد بيدين على مستوى الصدر','قدميك على عرض الكتف','انزل كأنك بتجلس على كرسي خلفك','انزل بعمق — الفخذ موازي للأرض','ارجع للأعلى وضغط المؤخرة'],tip:'بديل ممتاز للسكوات بالبار — الكور بيشتغل أكتر'},
+  {id:'e7',n:'الديدليفت الرومانية بالدمبل',en:'Romanian Deadlift',eq:'دمبل',gif:'exercises/romanian-deadlift.gif',s:3,r:10,rest:30,w:'8-10 كيلو لكل يد',ms:['الهامسترينج','المؤخرة','الظهر السفلي'],steps:['وقوف، الدمبل أمامك على طول ساقيك','انحنِ للأمام من الورك مش من الظهر','انزل الدمبل على طول ساقيك ببطء','ظهرك مستقيم، ركبتيك مثنية قليلاً','ارجع للأعلى بضغط المؤخرة'],tip:'بديل ممتاز لـ Leg Curl'},
+  {id:'e8',n:'اللانج للأمام بالدمبل',en:'Dumbbell Lunge',eq:'دمبل',gif:'exercises/dumbbell-lunge.gif',s:3,r:10,rest:30,w:'6 كيلو لكل يد',ms:['الفخذ','المؤخرة','التوازن'],steps:['وقوف مستقيم، الدمبل في كل يد جنبك','خطوة كبيرة للأمام بساق واحدة','انزل حتى تقترب ركبتك الخلفية من الأرض','ارجع للوقوف وكرر بالساق الثانية','10 تكرار لكل ساق'],tip:'الركبة الأمامية ما تعدّيش أصابع قدمك'},
+  {id:'e9',n:'كالف ريز بالدمبل',en:'Calf Raises',eq:'دمبل',gif:'exercises/calf-raises.gif',s:3,r:15,rest:30,w:'8 كيلو لكل يد',ms:['عضلة الساق'],steps:['وقوف مستقيم، دمبل في كل يد','ارفع كعبيك للأعلى ببطء حتى تقف على أصابعك','اثبت ثانية في الأعلى','انزل ببطء حتى الأرض','15 تكرار ببطء'],tip:'تمرين بسيط بيبني شكل الساق'},
+  {id:'e10',n:'البلانك',en:'Plank',eq:'بدون أدوات',gif:'exercises/plank.gif',s:3,r:null,dur:30,rest:30,w:'بدون وزن',ms:['الكور','البطن'],steps:['استلقِ على وجهك واتكئ على مرفقيك وأصابع قدميك','جسمك خط مستقيم من الرأس للقدم','شد بطنك للداخل بقوة','تنفس بشكل طبيعي 30 ثانية','لو صعب اتكئ على ركبتيك'],tip:'30 ثانية بشكل صح أحسن من دقيقة بشكل غلط',isTm:true}
+ ],
+ cd:[
+  {n:'إطالة الفخذ الأمامي',d:40,gif:'exercises/quad-stretch.gif',ins:'امسك كاحلك من الخلف — 20 ثانية لكل ساق'},
+  {n:'إطالة الهامسترينج',d:60,gif:'exercises/hamstring-stretch.gif',ins:'مد ساقك وحاول تلمس أصابعك — 30 ثانية لكل ساق'},
+  {n:'إطالة الكور',d:30,gif:'exercises/knee-to-chest.gif',ins:'استلقِ وحضن ركبتيك لصدرك 30 ثانية'},
+  {n:'تنفس عميق',d:60,gif:'exercises/deep-breathing.jpg',ins:'5 أنفاس عميقة لتهدئة الجسم'}
+ ]},
+{id:3,name:'اليوم الثالث',label:'الأربعاء',tl:'الظهر والبايسبس + كارديو',em:'🔥',c:'g',
+ wu:[
+  {n:'جاكس — Jumping Jacks',d:45,gif:'exercises/jumping-jacks.gif',ins:'45 ثانية قفز مع فتح الذراعين والساقين'},
+  {n:'دوران الكتف',d:45,gif:'exercises/shoulder-circles.gif',ins:'دوّر كتفيك في دوائر كبيرة 10 مرات للأمام و10 للخلف'},
+  {n:'5 دقايق سيكل خفيف',d:300,gif:'exercises/Light-Cycling.jpg',ins:'سيكل بسرعة خفيفة عشان تسخن الجسم'}
+ ],
+ ex:[
+  {id:'e_cflp',n:'سحب الكابل الأمامي بقبضة ضيقة',en:'Close-Grip Front Lat Pulldown',eq:'Cable Machine',gif:'exercises/cable-front-lat-pulldown.gif',s:3,r:12,rest:30,w:'وزن متوسط',ms:['الظهر العريض - Lats السفلية','البايسبس'],steps:['اجلس على الجهاز وثبت ركبتيك تحت البطانة','امسك البار بقبضة ضيقة من فوق','اسحب البار لأسفل بشكل مستقيم حتى يوصل لمستوى أعلى الصدر','اضغط عضلات الظهر في النهاية لمدة ثانية','ارجع ببطء للوضع الأول'],tip:'القبضة الضيقة بتركز أكتر على الـ Lats السفلية'},
+  {id:'e12',n:'سحب الدمبل للخلف على البنش المائل',en:'Dumbbell Row',eq:'دمبل + Decline Bench',gif:'exercises/dumbbell-row.gif',s:3,r:10,rest:30,w:'8 كيلو',ms:['الظهر العلوي','البايسبس'],steps:['ضع ركبة على البنش، اليد الأخرى عليه للتوازن','امسك الدمبل، ذراعك ممدودة للأسفل','اسحب الدمبل للأعلى نحو خصرك','توقف ثانية في الأعلى ثم انزل ببطء','10 تكرارات لكل جانب'],tip:'الظهر مستقيم طول الوقت'},
+  {id:'e13',n:'تفتيح الكتف الخلفي بالدمبل',en:'Bent-Over Reverse Fly',eq:'دمبل',gif:'exercises/reverse-fly.gif',s:3,r:12,rest:30,w:'3-5 كيلو لكل يد',ms:['الكتف الخلفي','الظهر العلوي'],steps:['وقوف، انحنِ للأمام من الورك حتى صدرك شبه موازي للأرض','الظهر مستقيم، دمبل في كل يد ممدودة للأسفل','ارفع الدمبلين للجانبين زي ما إنت بتفتح جناحين','اضغط لوحَي الكتف لبعض في النهاية','انزل ببطء'],tip:'تمرين بيحسّن وضعية الجسم وبيخلي الكتف يبان أعرض'},
+  {id:'e14',n:'كيرل البايسبس بالدمبل',en:'Bicep Curl',eq:'دمبل',gif:'exercises/bicep-curl.gif',s:3,r:12,rest:45,w:'5-6 كيلو لكل يد',ms:['البايسبس'],steps:['وقوف مستقيم، الدمبل في يدك وذراعك ممدودة','اثبّت مرفقك جنب جسمك','ارفع الدمبل للأعلى ببطء','انزل ببطء','الجانبين بالتناوب'],tip:'اللي بيتحرك هو الساعد بس'},
+  {id:'e15',n:'كرنشيز على البنش المائل',en:'Decline Crunches',eq:'Decline Bench',gif:'exercises/decline-crunches.gif',s:3,r:15,rest:30,w:'بدون وزن',ms:['البطن'],steps:['استلقِ على البنش المائل، الرأس لأسفل','يديك خلف رأسك أو على صدرك','ارفع كتفيك وصدرك للأعلى ببطء','ركّز على الضغط في البطن مش الرقبة','انزل ببطء'],tip:'البنش المائل بيخلي تمرين البطن أصعب وأكتر فعالية'}
+ ],
+ cd:[
+  {n:'إطالة الظهر',d:30,gif:'exercises/back-stretch.gif',ins:'اجلس وامسك ركبتيك واقوّس ظهرك للخلف 30 ثانية'},
+  {n:'إطالة البايسبس',d:40,gif:'exercises/bicep-stretch.gif',ins:'مد ذراعك وأدِر يدك للداخل — 20 ثانية لكل ذراع'},
+  {n:'إطالة الجسم كله',d:40,gif:'exercises/full-body-stretch.gif',ins:'ارفع يديك للأعلى واتمدد 40 ثانية'},
+  {n:'تنفس عميق',d:60,gif:'exercises/deep-breathing.jpg',ins:'5 أنفاس عميقة — أنت خلصت! 🎉'}
+ ]}
+];
+const COL={o:'#f97316',b:'#3b82f6',g:'#22c55e',r:'#ef4444'};
+const MEALS=[
+  {id:'m1',name:'الفطار',time:'8 ص',emoji:'🥪',cal:570,prot:27,where:'في الشغل',
+    items:[
+      {n:'سندوتش بيض (2 بيض + جبنة + خبز)',cal:370,prot:19},
+      {n:'كوب لبن كامل الدسم',cal:150,prot:8},
+      {n:'قهوة (سكر + لبن)',cal:50,prot:0}
+    ],
+    tip:'لو قدرت ضيف موزة جنب السندوتش = 90 سعر إضافية'},
+  {id:'m2',name:'الغدا',time:'1 م',emoji:'🍗',cal:900,prot:42,where:'وجبة الشغل',
+    items:[
+      {n:'وجبة الشغل (فراخ/لحمة + رز + مكرونة)',cal:750,prot:40},
+      {n:'حتة عيش بلدي إضافية',cal:100,prot:2},
+      {n:'مشروب غازي أو عصير (يزود سعرات بسهولة)',cal:50,prot:0}
+    ],
+    tip:'بدل المكسرات — العيش الإضافي والمشروب بيعوضوا السعرات'},
+  {id:'m3',name:'العشا',time:'7 م',emoji:'🍚',cal:850,prot:42,where:'في البيت',
+    items:[
+      {n:'فراخ/لحمة (200 جرام)',cal:350,prot:35},
+      {n:'كوب رز أبيض كبير',cal:250,prot:5},
+      {n:'بطاطس مسلوقة أو فرن',cal:150,prot:3},
+      {n:'كوب لبن كامل الدسم',cal:100,prot:8}
+    ],
+    tip:'لو حسيت إنك شبعان قبل ما تخلص، كمّل بالقوة'},
+  {id:'m4',name:'بروتين شيك قبل النوم',time:'8-9 م',emoji:'🥤',cal:760,prot:22,where:'في البيت',
+    items:[
+      {n:'كوب لبن كامل الدسم',cal:150,prot:8},
+      {n:'2 ملعقة زبدة فول سوداني',cal:190,prot:8},
+      {n:'2 ملعقة عسل',cal:130,prot:0},
+      {n:'موزة كبيرة',cal:120,prot:1},
+      {n:'حفنة مكسرات — 30 جرام (اختياري)',cal:170,prot:5},
+      {n:'4-5 بسكوت (اختياري)',cal:200,prot:3}
+    ],
+    tip:'اضرب كل ده في الخلاط — مشروب واحد بكل العناصر. الاختياري بيرفع السعرات لـ 960!'}
+];
+const MUSCLE_MAP={'الصدر':['chest'],'الصدر السفلي':['chest'],'الصدر — التشكيل':['chest'],'الكتف':['shoulderL','shoulderR'],'الكتف الأمامي':['shoulderL','shoulderR'],'الكتف الخلفي':['shoulderL','shoulderR'],'الترايسبس':['tricepL','tricepR'],'البايسبس':['bicepL','bicepR'],'الظهر العريض':['shoulderL','shoulderR','tricepL','tricepR'],'الظهر العريض - Lats':['shoulderL','shoulderR','tricepL','tricepR'],'الظهر العريض - Lats السفلية':['tricepL','tricepR'],'الظهر العلوي':['shoulderL','shoulderR'],'الظهر السفلي':['abs'],'الفخذ الأمامي':['quadL','quadR'],'الفخذ':['quadL','quadR'],'المؤخرة':['quadL','quadR'],'الهامسترينج':['quadL','quadR'],'عضلة الساق':['calfL','calfR'],'الكور':['abs'],'البطن':['abs'],'البطن العلوي':['abs'],'التوازن':['quadL','quadR','calfL','calfR'],'القلب':['head','chest','abs','bicepL','bicepR','tricepL','tricepR','quadL','quadR','calfL','calfR','shoulderL','shoulderR'],'حرق دهون':['head','chest','abs','bicepL','bicepR','tricepL','tricepR','quadL','quadR','calfL','calfR','shoulderL','shoulderR']};
+function muscleSVG(parts){
+  const h=p=>parts.includes(p)?'#f97316':'#cbd5e1';
+  return `<svg viewBox="0 0 24 38" width="56" height="88" style="flex-shrink:0">
+    <circle cx="12" cy="3.5" r="2.8" fill="${h('head')}"/>
+    <ellipse cx="6" cy="10" rx="3" ry="2.2" fill="${h('shoulderL')}"/>
+    <ellipse cx="18" cy="10" rx="3" ry="2.2" fill="${h('shoulderR')}"/>
+    <rect x="7.5" y="8.5" width="9" height="6" rx="2" fill="${h('chest')}"/>
+    <rect x="8.5" y="14.5" width="7" height="5" rx="1" fill="${h('abs')}"/>
+    <ellipse cx="3.5" cy="13.5" rx="1.8" ry="2.8" fill="${h('bicepL')}"/>
+    <ellipse cx="20.5" cy="13.5" rx="1.8" ry="2.8" fill="${h('bicepR')}"/>
+    <ellipse cx="2.5" cy="18.5" rx="1.5" ry="2.8" fill="${h('tricepL')}"/>
+    <ellipse cx="21.5" cy="18.5" rx="1.5" ry="2.8" fill="${h('tricepR')}"/>
+    <ellipse cx="9" cy="24" rx="2.3" ry="4" fill="${h('quadL')}"/>
+    <ellipse cx="15" cy="24" rx="2.3" ry="4" fill="${h('quadR')}"/>
+    <ellipse cx="9" cy="32" rx="1.8" ry="3.5" fill="${h('calfL')}"/>
+    <ellipse cx="15" cy="32" rx="1.8" ry="3.5" fill="${h('calfR')}"/>
+  </svg>`;
+}
+function muscleIcon(name){
+  let parts=MUSCLE_MAP[name];
+  if(!parts){for(const k in MUSCLE_MAP){if(name.includes(k)){parts=MUSCLE_MAP[k];break;}}}
+  return muscleSVG(parts||[]);
+}
+const EQ_MAP=[
+  {match:'دمبل',img:'exercises/dumbbells.jpg',name:'دمبل'},
+  {match:'Decline Bench',img:'exercises/decline-bench.jpg',name:'بنش مائل'},
+  {match:'Chest Press',img:'exercises/chest-press-machine.jpg',name:'Chest Press'},
+  {match:'Cable',img:'exercises/cable-machine.jpg',name:'Cable Machine'},
+  {match:'Treadmill',img:'exercises/treadmill.jpg',name:'تريدميل'},
+  {match:'Cycle',img:'exercises/cycle.jpg',name:'سيكل'}
+];
+function eqIcons(eqText,size){
+  const sz=size||32;
+  const found=EQ_MAP.filter(e=>eqText.includes(e.match));
+  if(!found.length)return '';
+  return found.map(e=>`<img src="${e.img}" alt="${e.name}" title="${e.name}" style="width:${sz}px;height:${sz}px;border-radius:50%;object-fit:cover;border:2px solid #e2e8f0;background:#f1f5f9"/>`).join('');
+}
+const GRD={o:'rgba(124,45,18,.6)',b:'rgba(30,58,95,.6)',g:'rgba(20,83,45,.6)'};
+const BTC={o:'bo',b:'bb',g:'bg'};
+const STORE_KEY='fitness_app_v1';
+const WEEK_MS=7*24*60*60*1000;
+function loadST(){
+  try{
+    const s=localStorage.getItem(STORE_KEY);
+    if(s){
+      const d=JSON.parse(s);
+      const w=typeof d.weight==='number'?d.weight:47;
+      const exW=(d.exerciseWeights&&typeof d.exerciseWeights==='object')?d.exerciseWeights:{};
+      const dk=!!d.dark;
+      if(d.weekStart&&(Date.now()-d.weekStart)>WEEK_MS){return{done:[],weekStart:0,weight:w,exerciseWeights:exW,dark:dk};}
+      if(Array.isArray(d.done))return{done:d.done,weekStart:d.weekStart||0,weight:w,exerciseWeights:exW,dark:dk};
+    }
+  }catch(e){}
+  return{done:[],weekStart:0,weight:47,exerciseWeights:{},dark:false};
+}
+function saveST(){
+  try{
+    if(!ST.weekStart&&ST.done.length>0)ST.weekStart=Date.now();
+    localStorage.setItem(STORE_KEY,JSON.stringify({done:ST.done,weekStart:ST.weekStart,weight:ST.weight,exerciseWeights:ST.exerciseWeights,dark:ST.dark}));
+  }catch(e){}
+}
+function getExWeight(ex){return ST.exerciseWeights[ex.id]||ex.w;}
+function setExWeight(exId,w){ST.exerciseWeights[exId]=w;saveST();}
+function applyTheme(){const dark=ST.dark;document.body.classList.toggle('dark',!!dark);const mt=document.querySelector('meta[name="theme-color"]');if(mt)mt.setAttribute('content',dark?'#0f172a':'#DEDEDE');}
+function celebrate(text,cb){const d=document.createElement('div');d.className='celebrate';d.innerHTML=`<div class="celebrate-text">${text}</div>`;document.body.appendChild(d);if(cb)setTimeout(cb,950);setTimeout(()=>d.remove(),1650);}
+function toggleTheme(){ST.dark=!ST.dark;saveST();applyTheme();showHome();}
+function parseWeight(w){
+  const m=String(w).match(/^[\s]*([\d]+(?:[.,-][\d]+)?)\s*(.*)$/);
+  if(m)return{num:m[1],label:(m[2]||'').trim()};
+  return{num:'—',label:String(w).trim()};
+}
+const _st=loadST();
+let ST={done:_st.done,weekStart:_st.weekStart,weight:_st.weight,exerciseWeights:_st.exerciseWeights,dark:_st.dark,day:null,wi:0,ci:0,ei:0,set:1,sessionStart:0,exerciseStart:0};
+let TM={id:null,rem:0,tot:0,cb:null,col:'o'};
+let SW={id:null};
+function fmtTime(s){const m=Math.floor(s/60),sec=s%60;return `${m}:${sec<10?'0':''}${sec}`;}
+function stopSw(){if(SW.id){clearInterval(SW.id);SW.id=null;}}
+function startSw(){stopSw();SW.id=setInterval(()=>{const ses=$('swSession'),exr=$('swExercise');if(ses){ses.textContent=fmtTime(Math.floor((Date.now()-ST.sessionStart)/1000));}if(exr){exr.textContent=fmtTime(Math.floor((Date.now()-ST.exerciseStart)/1000));}},1000);}
+const ap=()=>document.getElementById('ap');
+const $=id=>document.getElementById(id);
+function stopTm(){if(TM.id){clearInterval(TM.id);TM.id=null;}}
+function startTm(s,col,cb){stopTm();TM.rem=s;TM.tot=s;TM.col=col;TM.cb=cb;updTm();TM.id=setInterval(()=>{TM.rem--;updTm();if(TM.rem<=0){stopTm();if(TM.cb)TM.cb();}},1000);}
+function updTm(){const n=$('tn');if(n){const m=Math.floor(TM.rem/60),s=TM.rem%60;n.textContent=TM.rem>=60?`${m}:${s<10?'0':''}${s}`:TM.rem;}const c=$('tc');if(c){const R=72,C=2*Math.PI*R,p=TM.tot>0?(TM.tot-TM.rem)/TM.tot:0;c.style.strokeDashoffset=C*(1-p);c.style.stroke=TM.rem<=5?COL.r:COL[TM.col];}}
+function tmrHTML(col){const R=72,C=2*Math.PI*R;return`<div style="position:relative;width:170px;height:170px;margin:14px auto"><svg width="170" height="170" style="transform:rotate(-90deg)" viewBox="0 0 170 170"><circle cx="85" cy="85" r="${R}" fill="none" stroke="#cbd5e1" stroke-width="8"/><circle id="tc" cx="85" cy="85" r="${R}" fill="none" stroke="${COL[col]}" stroke-width="8" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C}" style="transition:stroke-dashoffset 1s linear"/></svg><div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center"><span id="tn" style="font-size:46px;font-weight:900;color:#0f172a">${TM.rem}</span><span style="font-size:13px;color:#64748b">ثانية</span></div></div>`;}
+function render(html){stopTm();ap().innerHTML=`<div class="fi">${html}</div>`;}
+
+function showHome(){
+  const tips=['زود وجباتك لـ 4-5 وجبات يومياً عشان وزنك يصعد','البروتين مهم — فراخ، بيض، لبن، تونة','الاتساق أهم من الكمال','النوم بيبني العضل — حاول 7-8 ساعات','3000+ سعر حراري يومياً هو هدفك','استخدم الكابلز كتير — أحسن جهاز عندك','البنش المائل ممتاز للصدر السفلي والبطن'];
+  const tip=tips[new Date().getDay()%tips.length];
+  const dayCards=DATA.map(d=>{
+    const isDone=ST.done.includes(d.id);
+    const bgImg=`exercises/cover-day${d.id}.jpg`;
+    return`<div data-day="${d.id}" style="position:relative;border-radius:20px;overflow:hidden;margin-bottom:12px;min-height:200px;box-shadow:0 4px 16px rgba(0,0,0,.15);cursor:pointer">
+      <div style="position:relative;min-height:200px;background:#1a1a1a ${bgImg?`url('${bgImg}') center/cover`:''}${isDone?';opacity:.65;filter:saturate(.7)':''}">
+        <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.6) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,0) 100%)"></div>
+        <div style="position:relative;padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-height:200px">
+          <div>
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+              <div style="flex:1">
+                <div style="font-size:22px;font-weight:700;color:#fff;line-height:1.2">${d.tl}</div>
+                <div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;line-height:1.4">${d.name} • ${d.label}</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px">
+              ${[`${d.ex.length} تمارين`,'3 مجموعات','~50 دقيقة'].map(t=>`<span style="background:rgba(255,255,255,.15);color:#fff;font-size:11px;padding:4px 10px;border-radius:20px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2)">${t}</span>`).join('')}
+            </div>
+            <div style="background:#fff;color:#000;padding:10px 20px;border-radius:12px;font-weight:600;font-size:14px;display:inline-block">${isDone?'🔁 أعد التمرين':'ابدأ التمرين ▶'}</div>
+          </div>
+        </div>
+      </div>
+      ${isDone?`<div style="position:absolute;top:18px;left:18px;width:36px;height:36px;border-radius:50%;background:#16a34a;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;font-weight:700;box-shadow:0 4px 12px rgba(22,163,74,.4);z-index:5">✓</div>`:''}
+    </div>`;
+  }).join('');
+  ap().innerHTML=`<div class="fi">
+    <div style="padding:16px 16px 10px;display:flex;justify-content:space-between;align-items:center">
+      <div style="text-align:right">
+        <div style="color:#818181;font-size:14px;line-height:1.3">السلام عليكم,</div>
+        <div style="font-size:20px;font-weight:600;color:#0f172a;line-height:1.3;margin-top:1px">أحمد 👋</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <svg id="themeToggle" style="cursor:pointer" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 10.4672C12.8704 10.4672 10.3333 12.9627 10.3333 16.041C10.3333 19.1193 12.8704 21.6147 16 21.6147C19.1296 21.6147 21.6667 19.1193 21.6667 16.041C21.6667 12.9627 19.1296 10.4672 16 10.4672ZM8.33333 16.041C8.33333 11.8762 11.7658 8.49999 16 8.49999C20.2341 8.49999 23.6667 11.8762 23.6667 16.041C23.6667 20.2057 20.2341 23.582 16 23.582C11.7658 23.582 8.33333 20.2057 8.33333 16.041ZM16 1.94262C16.5523 1.94262 17 2.383 17 2.92623V5.54917C17 6.09238 16.5523 6.53277 16 6.53277C15.4477 6.53277 15 6.09238 15 5.54917V2.92623C15 2.383 15.4477 1.94262 16 1.94262ZM16 25.5492C16.5523 25.5492 17 25.9896 17 26.5328V29.1557C17 29.6989 16.5523 30.1393 16 30.1393C15.4477 30.1393 15 29.6989 15 29.1557V26.5328C15 25.9896 15.4477 25.5492 16 25.5492ZM28.4128 8.99195C28.6889 9.4624 28.5251 10.064 28.0468 10.3356L25.7373 11.6471C25.259 11.9187 24.6475 11.7575 24.3713 11.287C24.0952 10.8166 24.259 10.215 24.7373 9.9434L27.0468 8.63192C27.5251 8.36034 28.1366 8.52149 28.4128 8.99195ZM7.62891 20.7952C7.90507 21.2656 7.74117 21.8672 7.26288 22.1388L4.95349 23.4503C4.47519 23.7219 3.86361 23.5607 3.58746 23.0903C3.31132 22.6199 3.47519 22.0183 3.95349 21.7467L6.26288 20.4352C6.74117 20.1636 7.35275 20.3248 7.62891 20.7952ZM3.58727 8.99168C3.86341 8.52128 4.475 8.36008 4.9533 8.63171L7.26272 9.94319C7.74101 10.2148 7.90485 10.8164 7.62875 11.2868C7.35259 11.7572 6.74101 11.9184 6.26272 11.6468L3.9533 10.3353C3.475 10.0637 3.31112 9.46214 3.58727 8.99168ZM24.371 20.795C24.6472 20.3245 25.2588 20.1634 25.7371 20.4349L28.0465 21.7464C28.5248 22.018 28.6886 22.6196 28.4125 23.09C28.1364 23.5604 27.5248 23.7217 27.0465 23.45L24.7371 22.1385C24.2588 21.867 24.0949 21.2654 24.371 20.795Z" fill="#9E9E9E"/>
+        </svg>
+      </div>
+    </div>
+    <div style="padding:8px 16px 12px">
+      <div style="display:flex;gap:10px;overflow-x:auto;scrollbar-width:none">
+        ${(()=>{
+          const today=new Date();
+          const dow=today.getDay();
+          const daysFromSat=(dow+1)%7;
+          const sat=new Date(today);sat.setDate(today.getDate()-daysFromSat);
+          const names=['السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة'];
+          const workoutDays=[0,2,4];
+          const grad='linear-gradient(126.57deg,rgb(255,136,0) 14.123%,rgb(255,132,110) 86.191%)';
+          return [...Array(7)].map((_,i)=>{
+            const d=new Date(sat);d.setDate(sat.getDate()+i);
+            const isWorkout=workoutDays.includes(i);
+            const isToday=d.toDateString()===today.toDateString();
+            let styles,nameColor,numColor;
+            if(isToday&&isWorkout){
+              styles=`background:${grad};border:1px solid transparent`;
+              nameColor='#fff';numColor='#fff';
+            }else if(isWorkout){
+              styles=`background:rgba(255,255,255,.5);border:1.5px solid rgba(255,136,0,.5)`;
+              nameColor='#8f8f8f';numColor='#727272';
+            }else if(isToday){
+              styles=`background:#fff;border:1px solid #fff`;
+              nameColor='#8f8f8f';numColor='#000';
+            }else{
+              styles=`background:rgba(255,255,255,.5);border:1px solid #fff`;
+              nameColor='#8f8f8f';numColor='#727272';
+            }
+            return `<div style="flex:0 0 auto;width:64px;${styles};backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);border-radius:20px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 8px;box-sizing:border-box">
+              <div style="font-size:11px;color:${nameColor};font-weight:400;line-height:1.24">${names[i]}</div>
+              <div style="font-size:22px;color:${numColor};font-weight:500;line-height:1.24">${d.getDate()}</div>
+            </div>`;
+          }).join('');
+        })()}
+      </div>
+    </div>
+    <div style="padding:0 16px;margin-bottom:12px">
+      ${(()=>{
+        const hour=new Date().getHours();
+        const sched=[{h:8,m:MEALS[0]},{h:13,m:MEALS[1]},{h:19,m:MEALS[2]},{h:20,m:MEALS[3]}];
+        const next=sched.find(s=>hour<s.h)||sched[0];
+        const isTomorrow=next===sched[0]&&hour>=20;
+        return `
+      <div id="mealsBtn" style="background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:14px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all .15s">
+        <img src="exercises/meal.png" alt="وجبات" style="width:60px;height:60px;object-fit:contain;flex-shrink:0"/>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:11px;color:rgba(255,255,255,.75);margin-bottom:2px">${isTomorrow?'وجبة بكرة':'وجبتك القادمة'} • ${next.m.time}</div>
+          <div style="font-size:16px;font-weight:700;color:#fff">${next.m.emoji} ${next.m.name}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.85);margin-top:3px">${next.m.cal} سعر • ${next.m.prot}g بروتين</div>
+        </div>`;
+      })()}
+        <span style="color:#fff;font-size:18px;width:30px;height:30px;border:1.5px solid rgba(255,255,255,.7);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1;padding-bottom:2px;margin-inline-end:10px">›</span>
+      </div>
+    </div>
+    <div style="padding:0 16px;margin-bottom:12px">
+      <div style="display:flex;gap:12px;align-items:stretch">
+        <div style="flex:1;min-width:0;background:rgba(255,255,255,.7);border:1px solid #fff;backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);border-radius:24px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:4px">
+          <img src="exercises/icon-training.png" alt="تمارين" style="width:54px;height:54px;object-fit:contain"/>
+          <div style="font-size:12px;color:#898989;line-height:1.24;text-align:center">تمارين كملتها</div>
+          <div style="font-size:24px;font-weight:600;color:#000;line-height:1.24;text-align:center">${ST.done.length}</div>
+        </div>
+        <div id="weightCard" style="flex:1;min-width:0;background:rgba(255,255,255,.7);border:1px solid #fff;backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);border-radius:24px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer" title="اضغط للتعديل">
+          <img src="exercises/icon-weight-scale.png" alt="وزني" style="width:54px;height:54px;object-fit:contain"/>
+          <div style="font-size:12px;color:#898989;line-height:1.24;text-align:center">وزني الحالي</div>
+          <div style="line-height:1.24;text-align:center"><span style="font-size:24px;font-weight:600;color:#000">${ST.weight}</span><span style="font-size:15px;color:#767676">kg</span></div>
+        </div>
+        <div style="flex:1;min-width:0;background:rgba(255,255,255,.7);border:1px solid #fff;backdrop-filter:blur(17px);-webkit-backdrop-filter:blur(17px);border-radius:24px;padding:12px;display:flex;flex-direction:column;align-items:center;gap:4px">
+          <img src="exercises/icon-target.png" alt="هدف" style="width:54px;height:54px;object-fit:contain"/>
+          <div style="font-size:12px;color:#898989;line-height:1.24;text-align:center">الهدف</div>
+          <div style="line-height:1.24;text-align:center"><span style="font-size:24px;font-weight:600;color:#000">57</span><span style="font-size:15px;color:#767676">kg</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:0 16px;margin-bottom:12px">
+      <div style="font-size:16px;color:#0f172a;font-weight:600;margin-bottom:10px">🏋️ أدواتك المتاحة</div>
+      <div style="display:flex;gap:10px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none">
+        ${[
+          {img:'exercises/dumbbells.jpg',n:'دمبل'},
+          {img:'exercises/decline-bench.jpg',n:'بنش مائل'},
+          {img:'exercises/chest-press-machine.jpg',n:'Chest Press'},
+          {img:'exercises/cable-machine.jpg',n:'Cable'},
+          {img:'exercises/treadmill.jpg',n:'تريدميل'},
+          {img:'exercises/cycle.jpg',n:'سيكل'}
+        ].map(eq=>`<div style="flex:0 0 auto;text-align:center"><div style="width:68px;height:68px;border-radius:50%;overflow:hidden;background:#f1f5f9;border:2px solid #e2e8f0;display:flex;align-items:center;justify-content:center"><img src="${eq.img}" alt="${eq.n}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=&quot;font-size:24px;color:#64748b&quot;>🏋️</span>'"/></div><div style="font-size:10px;color:#64748b;margin-top:5px;max-width:70px">${eq.n}</div></div>`).join('')}
+      </div>
+    </div>
+    <div style="padding:0 16px">
+      <div style="font-size:16px;color:#0f172a;font-weight:600;margin-bottom:3px">جلسات التمرين</div>
+      <div style="margin-bottom:10px"></div>
+      ${dayCards}
+    </div>
+    <div style="padding:10px 16px 16px">
+      <div style="background:#fff;border-radius:12px;padding:12px;font-size:12px;color:#64748b;line-height:1.6">
+        📊 <span style="color:#64748b;font-weight:600">هدفك (47 → 57 كيلو):</span> زود أكلك لـ 3000+ سعر حراري يومياً. التمرين بيبني العضل، بس الأكل هو اللي بيزود الوزن.
+      </div>
+      ${ST.done.length>0?`<button id="bReset" style="width:100%;margin-top:12px;padding:10px;background:transparent;border:1px solid #e2e8f0;color:#64748b;border-radius:10px;cursor:pointer;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif;font-size:12px">🔄 إعادة تعيين الأسبوع</button>`:''}
+    </div>
+  </div>`;
+  ap().querySelectorAll('[data-day]').forEach(btn=>btn.addEventListener('click',()=>{ST.day=DATA.find(d=>d.id==btn.dataset.day);ST.wi=0;ST.ci=0;ST.ei=0;ST.set=1;showIntro();}));
+  const tt=$('themeToggle');if(tt)tt.addEventListener('click',toggleTheme);
+  const br=$('bReset');if(br)br.addEventListener('click',()=>{if(confirm('هل أنت متأكد إنك عايز تبدأ أسبوع جديد؟')){ST.done=[];ST.weekStart=0;saveST();showHome();}});
+  const mb=$('mealsBtn');if(mb)mb.addEventListener('click',showMeals);
+  const wc=$('weightCard');if(wc)wc.addEventListener('click',()=>{
+    const v=prompt('وزنك الحالي بالكيلو:',ST.weight);
+    if(v!==null){const n=parseFloat(v);if(!isNaN(n)&&n>0&&n<300){ST.weight=n;saveST();showHome();}else if(v.trim()!==''){alert('من فضلك أدخل رقم صحيح بين 1 و 300');}}
+  });
+}
+
+function showMeals(){
+  const totCal=MEALS.reduce((s,m)=>s+m.cal,0);
+  const totProt=MEALS.reduce((s,m)=>s+m.prot,0);
+  ap().innerHTML=`<div class="fi">
+    <div style="padding:20px 16px 8px">
+      <button class="btn bs" id="bk" style="width:auto;padding:8px 14px;margin-bottom:12px">← رجوع</button>
+      <div style="font-size:24px;font-weight:900">🍽️ خطة الوجبات</div>
+      <div class="muted" style="margin-top:2px">مخصصة لزيادة وزنك من 47 → 57 كيلو</div>
+    </div>
+    <div style="padding:0 16px;margin-bottom:14px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <div style="background:#fff;border-radius:12px;padding:10px 8px;text-align:center"><div style="font-size:20px;font-weight:900;color:#f97316">${totCal}</div><div style="font-size:10px;color:#64748b;margin-top:2px">سعر حراري</div></div>
+        <div style="background:#fff;border-radius:12px;padding:10px 8px;text-align:center"><div style="font-size:20px;font-weight:900;color:#4ade80">${totProt}<span style="font-size:11px">g</span></div><div style="font-size:10px;color:#64748b;margin-top:2px">بروتين</div></div>
+        <div style="background:#fff;border-radius:12px;padding:10px 8px;text-align:center"><div style="font-size:20px;font-weight:900;color:#60a5fa">${MEALS.length}</div><div style="font-size:10px;color:#64748b;margin-top:2px">وجبات يومياً</div></div>
+      </div>
+    </div>
+    <div style="padding:0 16px 16px">
+      ${MEALS.map(m=>`
+        <div style="background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:14px;margin-bottom:12px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span style="font-size:32px">${m.emoji}</span>
+              <div>
+                <div style="font-weight:700;color:#0f172a;font-size:15px">${m.name}</div>
+                <div class="muted">${m.time} — ${m.where}</div>
+              </div>
+            </div>
+            <div style="text-align:left">
+              <div style="font-size:16px;font-weight:900;color:#f97316">${m.cal}</div>
+              <div style="font-size:10px;color:#4ade80">${m.prot}g بروتين</div>
+            </div>
+          </div>
+          <div style="border-top:1px solid #e2e8f0;padding-top:10px">
+            ${m.items.map(it=>`<div style="display:flex;justify-content:space-between;padding:4px 0;font-size:13px"><span style="color:#0f172a">• ${it.n}</span><span class="muted" style="flex-shrink:0">${it.cal} سعر</span></div>`).join('')}
+          </div>
+          <div style="background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.2);border-radius:10px;padding:8px 10px;margin-top:10px;font-size:12px;color:#fb923c">💡 ${m.tip}</div>
+        </div>
+      `).join('')}
+      <div style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:12px;font-size:12px;color:#334155;line-height:1.7;margin-top:8px">
+        <div style="color:#4ade80;font-weight:700;margin-bottom:6px">📌 نصايح مهمة</div>
+        • متفوّتش وجبة — كل ساعتين/تلاتة وجبة<br>
+        • اشرب 2-3 لتر مياه يومياً<br>
+        • لو حسيت بشبع، استمر تأكل بقوة — جسمك محتاج<br>
+        • ابعد عن المياه قبل الأكل بساعة عشان تأكل أكتر
+      </div>
+    </div>
+  </div>`;
+  $('bk').addEventListener('click',showHome);
+}
+
+function showIntro(){
+  const d=ST.day,col=COL[d.c];
+  render(`<div style="padding:16px">
+    <button class="btn bs" id="bk" style="width:auto;padding:8px 14px;margin-bottom:12px">← رجوع</button>
+    <div style="position:relative;border-radius:20px;overflow:hidden;margin-bottom:12px;min-height:180px;background:#1a1a1a url('exercises/cover-day${d.id}.jpg') center/cover;box-shadow:0 4px 16px rgba(0,0,0,.15)">
+      <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(0,0,0,.6) 0%,rgba(0,0,0,.35) 50%,rgba(0,0,0,0) 100%)"></div>
+      <div style="position:relative;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;min-height:180px">
+        <div style="font-size:22px;font-weight:700;color:#fff;line-height:1.2">${d.tl}</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;line-height:1.4">${d.name} • ${d.label}</div>
+      </div>
+    </div>
+    <div class="card"><div class="muted" style="margin-bottom:4px">🔥 الإحماء</div><div style="font-weight:600">${d.wu.length} تمارين تسخين</div></div>
+    <div class="card">
+      <div class="muted" style="margin-bottom:8px">💪 التمرين الرئيسي (${d.ex.length} تمارين)</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+      ${d.ex.map(e=>`<div data-ex-id="${e.id}" style="padding:10px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;display:flex;gap:10px;align-items:center;cursor:pointer;transition:all .15s" onmouseover="this.style.background='#1f2937';this.style.borderColor='#cbd5e1'" onmouseout="this.style.background='#111827';this.style.borderColor='#e2e8f0'">${e.gif?`<img src="${e.gif}" alt="${e.n}" style="width:60px;height:60px;border-radius:8px;object-fit:cover;background:#e2e8f0;flex-shrink:0;border:2px solid #fff"/>`:`<div style="width:60px;height:60px;border-radius:8px;background:#e2e8f0;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0">💪</div>`}<div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;font-size:13px;gap:8px;align-items:center"><span style="color:#0f172a;font-weight:600">${e.n}</span><span class="muted" style="background:#e2e8f0;padding:2px 8px;border-radius:6px;flex-shrink:0">${e.s}×${e.isTm?Math.floor(e.dur/60)+'د':e.r}</span></div><div style="display:flex;align-items:center;gap:5px;margin-top:4px"><span style="display:inline-flex;gap:3px">${eqIcons(e.eq,32)}</span><span style="font-size:10px;color:#4ade80">${e.eq}</span></div></div><span style="color:#64748b;font-size:18px;flex-shrink:0">‹</span></div>`).join('')}
+      </div>
+    </div>
+    <div class="card"><div class="muted" style="margin-bottom:4px">🧘 التهدئة</div><div style="font-weight:600">${d.cd.length} إطالات</div></div>
+    <button class="btn ${BTC[d.c]}" id="bst">ابدأ الإحماء 🔥</button>
+  </div>`);
+  $('bk').addEventListener('click',showHome);
+  $('bst').addEventListener('click',()=>{ST.sessionStart=Date.now();startSw();showWarmup();});
+  ap().querySelectorAll('[data-ex-id]').forEach(card=>{
+    card.addEventListener('click',()=>{
+      const ex=ST.day.ex.find(x=>x.id===card.dataset.exId);
+      if(ex)showExercisePreview(ex);
+    });
+  });
+}
+
+function showExercisePreview(ex){
+  const d=ST.day,col=COL[d.c];
+  render(`<div style="padding:16px">
+    <button class="btn bs" id="bk" style="width:auto;padding:8px 14px;margin-bottom:12px">← رجوع</button>
+    ${ex.gif?`<img src="${ex.gif}" alt="${ex.n}" style="width:100%;max-width:420px;border-radius:14px;margin-bottom:12px;background:#f1f5f9;border:3px solid #fff;display:block"/>`:`<div style="text-align:center;font-size:80px;margin-bottom:12px">💪</div>`}
+    <div style="font-size:20px;font-weight:900;color:#0f172a;margin-bottom:4px">${ex.n}</div>
+    <div class="muted" style="margin-bottom:8px">${ex.en}</div>
+    <div style="margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="display:inline-flex;gap:4px">${eqIcons(ex.eq,60)}</span><span class="eq">🏋️ ${ex.eq}</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px">${ex.ms.map(m=>`<span class="tag">${muscleIcon(m)}${m}</span>`).join('')}</div>
+    <div class="card" style="display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;gap:4px;margin-bottom:12px">
+      <div><div class="muted" style="font-size:10px">المجموعات</div><div style="font-size:22px;font-weight:900;color:#0f172a">${ex.s}</div></div>
+      <div><div class="muted" style="font-size:10px">${ex.isTm?'المدة':'التكرارات'}</div><div style="font-size:22px;font-weight:900;color:#f97316">${ex.isTm?Math.floor(ex.dur/60)+'د':ex.r}</div></div>
+      <div><div class="muted" style="font-size:10px">الراحة</div><div style="font-size:18px;font-weight:700;color:#60a5fa">${ex.rest}s</div></div>
+    </div>
+    <div class="card">
+      <div style="font-weight:700;font-size:14px;margin-bottom:8px;color:#0f172a">📋 طريقة الأداء</div>
+      ${ex.steps.map((s,i)=>`<div style="display:flex;gap:8px;margin-bottom:6px"><span style="color:#f97316;font-weight:700;min-width:18px;font-size:13px">${i+1}.</span><span style="font-size:13px;color:#334155;line-height:1.6">${s}</span></div>`).join('')}
+      <div class="tip" style="margin-top:10px">💡 ${ex.tip}</div>
+      <div style="background:#e2e8f0;border-radius:8px;padding:8px 12px;margin-top:10px;font-size:13px;color:#64748b">الوزن المقترح: <span style="color:#0f172a;font-weight:600">${ex.w}</span></div>
+    </div>
+  </div>`);
+  $('bk').addEventListener('click',showIntro);
+}
+
+function showWarmup(){
+  const d=ST.day,i=ST.wi,item=d.wu[i],isLast=i===d.wu.length-1;
+  const dots=d.wu.map((_,j)=>`<div style="width:30px;height:4px;border-radius:3px;background:${j<=i?COL[d.c]:'#94a3b8'}"></div>`).join('');
+  render(`<div style="padding:16px">
+    <div class="row" style="justify-content:space-between;margin-bottom:14px">
+      <button class="btn bs" id="bk" style="width:auto;padding:8px 16px;font-size:14px">← رجوع</button>
+      <div style="display:flex;gap:4px">${dots}</div>
+    </div>
+    <div style="text-align:center">
+      <div class="muted" style="margin-bottom:4px">🔥 الإحماء</div>
+      <div style="font-size:18px;font-weight:700;margin-bottom:8px">${item.n}</div>
+      ${item.gif?`<img src="${item.gif}" alt="${item.n}" style="width:100%;max-width:360px;border-radius:14px;margin:8px auto;display:block;background:#f1f5f9;border:3px solid #fff"/>`:''}
+      <div style="font-size:13px;color:#64748b;margin-bottom:12px;line-height:1.6;padding:0 4px">${item.ins}</div>
+      ${tmrHTML(d.c)}
+      <button class="btn ${BTC[d.c]}" id="bgo" style="margin-top:8px">ابدأ ▶</button>
+      <button class="btn bs" id="bnx" style="display:none">${isLast?'ابدأ التمرين 💪':'التالي →'}</button>
+    </div>
+  </div>`);
+  $('bk').addEventListener('click',i===0?showIntro:()=>{ST.wi--;showWarmup();});
+  $('bgo').addEventListener('click',()=>{$('bgo').style.display='none';$('bnx').style.display='block';startTm(item.d,d.c,()=>$('bnx').click());});
+  $('bnx').addEventListener('click',()=>{if(isLast)showMain();else{ST.wi++;showWarmup();}});
+  if(i>0)$('bgo').click();
+}
+
+function showMain(){
+  const d=ST.day,ex=d.ex[ST.ei];
+  const pct=Math.round((ST.ei/d.ex.length)*100);
+  const sesT=fmtTime(Math.floor((Date.now()-ST.sessionStart)/1000));
+  render(`<div class="prog"><div class="prog-i" style="width:${pct}%;background:${COL[d.c]}"></div></div>
+    <div style="padding:8px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
+      <button class="btn bs" id="bk" style="width:auto;padding:5px 10px;font-size:12px">← رجوع</button>
+      <div style="background:#f1f5f9;border-radius:8px;padding:5px 14px;display:flex;align-items:center;gap:6px">
+        <span style="font-size:11px;color:#64748b">⏱️ الجلسة</span>
+        <span id="swSession" style="font-size:14px;font-weight:700;color:#f97316">${sesT}</span>
+      </div>
+      <span class="muted" style="font-size:11px">${ST.ei+1}/${d.ex.length}</span>
+    </div>
+    <div style="padding:0 16px 16px">
+      <div class="card" style="display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;gap:4px;margin-bottom:8px">
+        <div><div class="muted" style="font-size:10px">المجموعة</div><div style="font-size:28px;font-weight:900">${ST.set}<span style="font-size:14px;color:#cbd5e1">/${ex.s}</span></div></div>
+        <div><div class="muted" style="font-size:10px">التكرارات</div><div style="font-size:28px;font-weight:900;color:#f97316">${ex.isTm?Math.floor(ex.dur/60)+'د':ex.r}</div></div>
+        <div><div class="muted" style="font-size:10px;display:flex;align-items:center;justify-content:center;gap:4px">الوزن <button id="bEditW" style="background:none;border:none;cursor:pointer;padding:0;color:#f97316;font-size:12px;line-height:1">✏️</button></div>${(()=>{const p=parseWeight(getExWeight(ex));return `<div style="font-size:28px;font-weight:900;color:#0f172a;line-height:1">${p.num}</div>${p.label?`<div style="font-size:9px;color:#64748b;line-height:1;margin-top:2px">${p.label}</div>`:''}`;})()}</div>
+      </div>
+      <button id="btoggle" style="background:none;border:none;color:#f97316;font-size:12px;cursor:pointer;padding:4px 0;display:block;margin-bottom:8px;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif">▼ عرض طريقة الأداء</button>
+      <div id="det" style="display:none">
+        <div class="card">
+          <div style="font-weight:700;font-size:14px;margin-bottom:4px">${ex.n}</div>
+          <div class="muted" style="font-size:11px;margin-bottom:6px">${ex.en}</div>
+          <div style="margin-bottom:8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="display:inline-flex;gap:4px">${eqIcons(ex.eq,48)}</span><span class="eq">🏋️ ${ex.eq}</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:10px">${ex.ms.map(m=>`<span class="tag">${muscleIcon(m)}${m}</span>`).join('')}</div>
+          ${ex.steps.map((s,i)=>`<div style="display:flex;gap:6px;margin-bottom:4px"><span style="color:#f97316;font-weight:700;min-width:16px;font-size:12px">${i+1}.</span><span style="font-size:12px;color:#334155;line-height:1.5">${s}</span></div>`).join('')}
+          <div class="tip">💡 ${ex.tip}</div>
+          <div style="background:#e2e8f0;border-radius:8px;padding:7px 10px;margin-top:8px;font-size:12px;color:#64748b">الوزن: <span style="color:#0f172a;font-weight:600">${ex.w}</span></div>
+        </div>
+      </div>
+      <div id="exmain" style="text-align:center;padding:8px 0">
+        ${ex.gif?`<img src="${ex.gif}" alt="${ex.n}" style="width:100%;max-width:420px;border-radius:14px;margin-bottom:12px;background:#f1f5f9;border:3px solid #fff"/>`:`<div style="font-size:60px;margin-bottom:8px">💪</div>`}
+        <div style="font-size:17px;font-weight:700;margin-bottom:4px">${ex.n}</div>
+        <div class="muted" style="margin-bottom:8px">${ex.en}</div>
+        ${ex.tip?`<div class="tip" style="text-align:right;margin:0 auto 10px;max-width:420px">💡 ${ex.tip}</div>`:''}
+        <div style="margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap"><span style="display:inline-flex;gap:4px">${eqIcons(ex.eq,48)}</span><span class="eq">🏋️ ${ex.eq}</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:3px;justify-content:center;margin-bottom:8px">${ex.ms.map(m=>`<span class="tag">${muscleIcon(m)}${m}</span>`).join('')}</div>
+      </div>
+      ${ex.isTm?`<div style="text-align:center;margin-bottom:8px">${tmrHTML(d.c)}<button class="btn ${BTC[d.c]}" id="bdone" style="margin-top:8px">ابدأ المؤقت ▶</button></div>`:`<div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">${[...Array(ex.s)].map((_,i)=>{const setNum=i+1;const isDone=setNum<ST.set;const isActive=setNum===ST.set;const isPending=setNum>ST.set;if(isDone)return `<button disabled style="width:100%;padding:14px;border-radius:14px;border:1px solid #bbf7d0;font-weight:600;font-size:14px;background:#dcfce7;color:#15803d;cursor:not-allowed;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif">✓ المجموعة ${setNum} مكتملة</button>`;if(isActive)return `<button id="bdone" class="btn ${BTC[d.c]} set-pulse" style="margin-bottom:0">✓ خلصت المجموعة ${setNum}</button>`;return `<button disabled style="width:100%;padding:14px;border-radius:14px;border:1.5px solid #cbd5e1;background:transparent;color:#94a3b8;font-weight:600;font-size:14px;cursor:not-allowed;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif">المجموعة ${setNum}</button>`;}).join('')}</div>`}
+      ${(()=>{
+        const nx=d.ex[ST.ei+1];
+        const skipBtn=`<button id="bskip" style="background:#cbd5e1;border:none;color:#334155;font-size:11px;padding:7px 11px;border-radius:8px;cursor:pointer;font-family:'IBM Plex Sans','IBM Plex Sans Arabic',sans-serif;font-weight:600;flex-shrink:0;white-space:nowrap">تخطي للتمرين ←</button>`;
+        if(!nx)return `<div style="background:transparent;border:1.5px solid #475569;border-radius:14px;padding:12px;margin-top:12px;display:flex;align-items:center;gap:10px"><div style="width:50px;height:50px;border-radius:10px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🧘</div><div style="flex:1;min-width:0;text-align:right"><div class="muted" style="font-size:10px;margin-bottom:2px">التالي</div><div style="font-size:14px;font-weight:600;color:#0f172a">التهدئة والإطالات</div></div>${skipBtn}</div>`;
+        return `<div style="background:transparent;border:1.5px solid #475569;border-radius:14px;padding:12px;margin-top:12px;display:flex;align-items:center;gap:10px">${nx.gif?`<img src="${nx.gif}" alt="${nx.n}" style="width:50px;height:50px;border-radius:10px;object-fit:cover;background:#f1f5f9;flex-shrink:0;border:2px solid #fff"/>`:`<div style="width:50px;height:50px;border-radius:10px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">💪</div>`}<div style="flex:1;min-width:0;text-align:right"><div class="muted" style="font-size:10px;margin-bottom:2px">التمرين التالي</div><div style="font-size:14px;font-weight:600;color:#0f172a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${nx.n}</div><div class="muted" style="font-size:11px;margin-top:2px">${nx.s}×${nx.isTm?Math.floor(nx.dur/60)+'د':nx.r}</div></div>${skipBtn}</div>`;
+      })()}
+    </div>`);
+  $('bk').addEventListener('click',()=>{if(ST.ei===0)showWarmup();else{ST.ei--;ST.set=1;showMain();}});
+  $('btoggle').addEventListener('click',()=>{const det=$('det'),m=$('exmain'),b=$('btoggle');if(det.style.display==='none'){det.style.display='block';m.style.display='none';b.textContent='▲ إخفاء التعليمات';}else{det.style.display='none';m.style.display='block';b.textContent='▼ عرض طريقة الأداء';}});
+  const bew=$('bEditW');if(bew)bew.addEventListener('click',(e)=>{e.stopPropagation();const cur=getExWeight(ex);const parsed=parseWeight(cur);const v=prompt('الوزن (رقم فقط):',parsed.num);if(v!==null&&v.trim()){const newW=parsed.label?`${v.trim()} ${parsed.label}`:v.trim();setExWeight(ex.id,newW);showMain();}});
+  if(ex.isTm){
+    $('bdone').addEventListener('click',()=>{$('bdone').textContent='⏳ شغّال...';startTm(ex.dur,d.c,()=>{celebrate('عاااااااااااااش',()=>{if(ST.set<ex.s)showRest();else nextEx();});});});
+  }else{
+    $('bdone').addEventListener('click',()=>{celebrate('عاااااااااااااش',()=>{if(ST.set<ex.s)showRest();else nextEx();});});
+  }
+  $('bskip').addEventListener('click',nextEx);
+}
+
+function nextEx(){const d=ST.day;if(ST.ei<d.ex.length-1){ST.ei++;ST.set=1;showMain();}else showCooldown();}
+
+function showRest(){
+  const d=ST.day,ex=d.ex[ST.ei];
+  render(`<div style="padding:16px;text-align:center">
+    <div style="font-size:14px;font-weight:700;margin-bottom:4px">${ex.n}</div>
+    <div class="muted" style="margin-bottom:4px">المجموعة ${ST.set} من ${ex.s}</div>
+    <div class="muted" style="margin-bottom:8px">⏳ راحة بين المجموعات</div>
+    ${tmrHTML(d.c)}
+    <button class="btn bs" id="bskip" style="margin-top:8px">تخطي الراحة →</button>
+  </div>`);
+  const after=()=>{ST.set++;showMain();};
+  startTm(ex.rest,d.c,after);
+  $('bskip').addEventListener('click',()=>{stopTm();after();});
+}
+
+function showCooldown(){
+  const d=ST.day,i=ST.ci,item=d.cd[i],isLast=i===d.cd.length-1;
+  const dots=d.cd.map((_,j)=>`<div style="width:30px;height:4px;border-radius:3px;background:${j<=i?COL.b:'#94a3b8'}"></div>`).join('');
+  render(`<div style="padding:16px">
+    <div class="row" style="justify-content:space-between;margin-bottom:14px">
+      <button class="btn bs" id="bk" style="width:auto;padding:8px 16px;font-size:14px">← رجوع</button>
+      <div style="display:flex;gap:4px">${dots}</div>
+    </div>
+    <div style="text-align:center">
+      <div class="muted" style="margin-bottom:4px">🧘 التهدئة</div>
+      <div style="font-size:18px;font-weight:700;margin-bottom:8px">${item.n}</div>
+      ${item.gif?`<img src="${item.gif}" alt="${item.n}" style="width:100%;max-width:360px;border-radius:14px;margin:8px auto;display:block;background:#f1f5f9;border:3px solid #fff"/>`:''}
+      <div style="font-size:13px;color:#64748b;margin-bottom:12px;line-height:1.6;padding:0 4px">${item.ins}</div>
+      ${tmrHTML('b')}
+      <button class="btn bb" id="bgo" style="margin-top:8px">ابدأ ▶</button>
+      <button class="btn bs" id="bnx" style="display:none">${isLast?'إنهاء الجلسة 🎉':'التالي →'}</button>
+    </div>
+  </div>`);
+  $('bk').addEventListener('click',()=>{if(i===0)showMain();else{ST.ci--;showCooldown();}});
+  $('bgo').addEventListener('click',()=>{$('bgo').style.display='none';$('bnx').style.display='block';startTm(item.d,'b',()=>$('bnx').click());});
+  $('bnx').addEventListener('click',()=>{if(isLast)showDone();else{ST.ci++;showCooldown();}});
+  if(i>0)$('bgo').click();
+}
+
+function showDone(){
+  const d=ST.day;
+  if(!ST.done.includes(d.id)){ST.done.push(d.id);saveST();}
+  stopSw();
+  const totalTime=fmtTime(Math.floor((Date.now()-ST.sessionStart)/1000));
+  const msgs=['أداء رائع! 💪','عمل ممتاز! 🔥','خطوة للأمام! ⭐'];
+  render(`<div style="padding:16px;text-align:center">
+    <div style="font-size:72px;margin-bottom:12px">🏆</div>
+    <div style="font-size:22px;font-weight:900;margin-bottom:4px">${msgs[Math.floor(Math.random()*3)]}</div>
+    <div class="muted" style="margin-bottom:10px">أنهيت ${d.name} — ${d.tl}</div>
+    <div style="display:inline-block;background:#f1f5f9;border-radius:12px;padding:10px 18px;margin-bottom:16px"><div style="font-size:11px;color:#64748b">⏱️ وقت الجلسة الكامل</div><div style="font-size:24px;font-weight:900;color:#f97316">${totalTime}</div></div>
+    <div class="card" style="text-align:right;margin-bottom:16px">
+      <div class="muted" style="font-weight:700;margin-bottom:10px">تذكّر بعد التمرين:</div>
+      ${[['🍗','تناول وجبة بروتين خلال ساعة من التمرين'],['💧','اشرب ماء كافي — على الأقل 2 لتر'],['😴','نام كويس — العضل بيبنى في النوم'],['🍚','زود وجباتك — الأكل هو الأهم لك']].map(([ic,tx])=>`<div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="font-size:16px">${ic}</span><span style="font-size:13px;color:#334155;line-height:1.5">${tx}</span></div>`).join('')}
+    </div>
+    <button class="btn bo" id="bhome">رجوع للرئيسية</button>
+  </div>`);
+  $('bhome').addEventListener('click',showHome);
+}
+
+applyTheme();
+showHome();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+</script>
+</body>
+</html>
